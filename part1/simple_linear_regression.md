@@ -62,8 +62,16 @@ $$
 [\hat{\beta_1} - 2SE(\hat{\beta_1}), \hat{\beta_1} + 2SE(\hat{\beta_1})]
 $$
 
-
 ### Hypothesis Testing
+In the case of the advertising data, 95% confidence interval for $$\beta_0$$ is [6.130, 7.935] and the 95% confidence interval for $$\beta_1$$ is [0.042, 0,053]. Therefore, we can conclude that in the absence of any advertising, sales will(on average), fall somewhere between 6130 and 7940 units.
+SE can also be used to preform **hypothesis tests** on the coefficients.The most common hypothesis test involves testing the null hypothesis of
+$$
+H_0 : \beta_1 = 0 (There is no relationship between X and Y)
+$$
+versus the alternative hypothesis:
+$$
+H_a : \beta_1 \neq 0 (There is some relationship between X and Y)
+$$
 
 
 ## References
