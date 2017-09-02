@@ -1,4 +1,12 @@
 {
-"plugins": ["katex"]
+"plugins": [
+"katex",
+"splitter",
+"prism",
+"expandable-chapters"
+],
+"theme-default": {
+        "showLevel": true
+    }
 }
 
