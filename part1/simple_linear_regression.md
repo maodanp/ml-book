@@ -88,12 +88,19 @@ $$
 RSE = \sqrt{\frac{1}{n-2}RSS} = \sqrt{\frac{1}{n-2} \sum_{i=1}^2(y_i - \hat y_i)^2}
 $$
 where the residual sum-of-squares is $$RSS=\sum_{i=1}^2(y_i - \hat y_i)^2$$
-In advertising data set, the mean value of sales over all markets is approximately 14000 units, and so the preentage error is $$3260/14000=23\%$$
 The RSE is considered a measure of the lack of the model to the data(模型对数据是否合适的一种度量):
 * if the predictions obtained using the model are very close to the true outcome value, we can conclde that the model fits the data very well.
 * on the other hand, RSE may be quite large, indicating that the model doesn't fit the data well.
+In advertising data set, the mean value of sales over all markets is approximately 14000 units, and so the preentage error is $$3260/14000=23\%$$
 
 ### $$R^2$$ Statistics
+The RSE provides an absolute measure, it takes the form of a proportion——the proportion of variance explained:
+$$
+R^2 = \frac{TSS - RSS}{TSS} = 1 - \frac{RSS}{TSS}
+$$
+* $$TSS = \sum(y_i - \overline{y})^2$$ is the total sum of squares.
+* $$RSS=\sum_{i=1}^2(y_i - \hat y_i)^2$$ is the residual sum-of-squares.
+
 
 ## References
 
