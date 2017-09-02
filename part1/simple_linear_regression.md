@@ -74,7 +74,7 @@ H_a : \beta_1 \neq 0
 $$
 We compute a t-statistic give by:
 $$
-t = \frac{\hat{\beta_1 - 0}}{SE(\hat{\beta_1})}
+t = \frac{\hat{\beta_1} - 0}{SE(\hat{\beta_1})}
 $$
 which measures the number of standard deviations that $\hat beta_1$ is away from 0.
 We call the $$|t|$$ p-value.
