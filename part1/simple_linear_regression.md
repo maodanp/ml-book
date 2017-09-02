@@ -49,7 +49,7 @@ RSE = \frac{RSS}{n-2}
 $$
 
 
-## SE for slop and intercept
+### SE for slop and intercept
 $$
 SE(\hat{\beta_0})^2 = \sigma^2[\frac{1}{n} + \frac{\overline{x}^2}{\sum_{i=1}^n(x_i - \overline{x})^2}]
 $$
@@ -78,6 +78,17 @@ t = \frac{\hat{\beta_1 - 0}}{SE(\hat{\beta_1})}
 $$
 which measures the number of standard deviations that $\hat beta_1$ is away from 0.
 We call the $$|t|$$ p-value.
+
+## Assessing the Accuracy of the Model
+It's natural to want to quantify the extent to which the model fits the data. The quality of a linear regression fit is typically assessed using two quantities: the residual standard error(RSE) and the $$R^2$$ statistic.
+
+### Residual Standard Error
+The RSE is an estimate of the standard deviation.
+$$
+RSE = \sqrt{\frac{1}{n-2}RSS} = \sqrt{\frac{1}{n-2} \sum_{i=1}{n}(y_i - \hat y_i)^2$$}
+$$
+where the residual sum-of-squares is $$RSS=\sum_{i=1}{n}(y_i - \hat y_i)^2$$
+
 
 
 ## References
