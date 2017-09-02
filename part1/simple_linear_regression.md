@@ -51,7 +51,7 @@ $$
 ### confidence intervals
 These SE can be used to compute **confidence intervals**. A 95% confidence intervals is defined as a range of values such that with 95% probabilite, the range will contain the true unknown value of the parameter.That is, there is approximately a 95% chance taht the interval will contain the true value of $$\beta_1$$
 $$
-[\hat \beat_1 - 2SE(\hat \beat_1), \hat \beat_1 + 2SE(\hat \beat_1)]
+[\hat{\beat_1} - 2SE(\hat{\beat_1}), \hat{\beat_1} + 2SE(\hat{\beat_1})]
 $$
 
 
