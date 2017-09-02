@@ -16,7 +16,9 @@ RSS = (y_1 - \hat y_1)^2 + (y_2 - \hat y_2)^2 +  ... + (y_n - \hat y_n)^2
 $$
 * The least squares approach chooses $$\hat \beta_0$$ and $$\hat \beta_1$$ to minimize the RSS. The minimizing values can be shown to be
 $$
+\begin{cases}  
 \hat \beta_1 = \frac{\sum_{i=1}^n(x_i - \overline x)(y_i - \overline y)}{\sum_{i=1}^n(x_i - \overline x)^2}\\
 
 \hat \beta_0 = \hat y - \hat{\beta_1}\overline{x}
+\end{cases}  
 $$
