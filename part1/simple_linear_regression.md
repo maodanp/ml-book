@@ -98,8 +98,10 @@ The RSE provides an absolute measure, it takes the form of a proportion——the
 $$
 R^2 = \frac{TSS - RSS}{TSS} = 1 - \frac{RSS}{TSS}
 $$
-* $$TSS = \sum(y_i - \overline{y})^2$$ is the total sum of squares.
-* $$RSS=\sum_{i=1}^2(y_i - \hat y_i)^2$$ is the residual sum-of-squares.
+* $$TSS = \sum(y_i - \overline{y})^2$$ is the total sum of squares, which measures the total variance in the response $$Y$$, and can be thought of as the amount of variability inherent in the response before the regression is performed(一种在regression 执行前响应中固有的变量)
+* $$RSS=\sum_{i=1}^2(y_i - \hat y_i)^2$$ is the residual sum-of-squares, which measures the amount of variability that is left unexplained after performing the regression(执行完regression后不明原因/不可解释的变量)
+* An $$R^2$$ statistic that is close to 1 indicates that a large proportion of the variability in the response has been explained by the regression
+* A number near 0 indicates that the regression did't explain much of the variability in the response; this might occur because the linear model is wrong, or the inherent error $$\sigma^2$$ is high, or both
 
 
 ## References
