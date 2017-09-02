@@ -32,7 +32,7 @@ If we estimate $$\beta_0$$ and $$\beta_1$$ on the basis of a particular data set
 ### terms
 * standard deviation(标准差): 即方差的标准化，反映样本的离散程度。
 $$
-\Theta = \sqrt{\frac{1}{N}\sum_{i=1}^N(x_i-u)^2}
+\theta = \sqrt{\frac{1}{N}\sum_{i=1}^N(x_i-u)^2}
 $$
 * standard error(标准误差): 样本统计量（这里的样本统计量可以是平均数，标准差，相关系数等等）的标准差，衡量抽样样本（统计量）的误差。
 知道总体的标准差：
@@ -48,11 +48,19 @@ $$
 RSE = \frac{RSS}{n-2}
 $$
 
+
+## SE for slop and intercept
+$$
+SE(\hat{\beta_0})^2 = \theta^2[\frac{1}{n} + \frac{\overline{x}^2}{\sum_{i=1}^n(x_i - \overline{x})^2}]
+$$
+
 ### confidence intervals
 These SE can be used to compute **confidence intervals**. A 95% confidence intervals is defined as a range of values such that with 95% probability, the range will contain the true unknown value of the parameter.That is, there is approximately a 95% chance that the interval will contain the true value of $$\beta_1$$
 $$
 [\hat{\beta_1} - 2SE(\hat{\beta_1}), \hat{\beta_1} + 2SE(\hat{\beta_1})]
 $$
+
+### Hypothesis Testing
 
 
 ## References
