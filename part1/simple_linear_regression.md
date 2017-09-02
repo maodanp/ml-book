@@ -2,7 +2,7 @@
 
 \* By far the most common approach involves minimizing the \*least squares criterion\*.
 
-\* Let $$\hat y\_i = \vec \beta\_0 + \vec \beta\_1x\_1$$ be prediction for $Y$ $$x = y$$ based on the $i$th value of $X$.
+\* Let $$\hat y_i = \vec \beta_0 + \vec \beta_1x_1$$ be prediction for $Y$ $$x = y$$ based on the $i$th value of $X$.
 
 \* Then $e\_i = y\_i - \hat y\_i$ represents the $i$th \*redisual\*
 
