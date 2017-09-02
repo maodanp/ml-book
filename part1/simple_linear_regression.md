@@ -107,3 +107,4 @@ $$
 ## References
 
 [standard deviation 和standard error的区别](https://www.zhihu.com/question/21925923)
+[Stastical Learning ch2](http://online.stanford.edu/course/statistical-learning-winter-2014)
