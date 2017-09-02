@@ -89,8 +89,7 @@ RSE = \sqrt{\frac{1}{n-2}RSS} = \sqrt{\frac{1}{n-2} \sum_{i=1}^2(y_i - \hat y_i)
 $$
 where the residual sum-of-squares is $$RSS=\sum_{i=1}^2(y_i - \hat y_i)^2$$
 In advertising data set, the mean value of sales over all markets is approximately 14000 units, and so the preentage error is $$3260/14000=23\%$$
-
-
+The RSE
 
 ## References
 
