@@ -53,12 +53,15 @@ $$
 $$
 SE(\hat{\beta_0})^2 = \sigma^2[\frac{1}{n} + \frac{\overline{x}^2}{\sum_{i=1}^n(x_i - \overline{x})^2}]
 $$
-
+$$
+SE(\hat{\beta_1})^2 = \frac{\sigma^2}{\sum_{i=1}^n(x_i - \overline{x})^2}
+$$
 ### confidence intervals
 These SE can be used to compute **confidence intervals**. A 95% confidence intervals is defined as a range of values such that with 95% probability, the range will contain the true unknown value of the parameter.That is, there is approximately a 95% chance that the interval will contain the true value of $$\beta_1$$
 $$
 [\hat{\beta_1} - 2SE(\hat{\beta_1}), \hat{\beta_1} + 2SE(\hat{\beta_1})]
 $$
+
 
 ### Hypothesis Testing
 
