@@ -37,14 +37,22 @@ $$
 * standard error(标准误差): 样本统计量（这里的样本统计量可以是平均数，标准差，相关系数等等）的标准差，衡量抽样样本（统计量）的误差。
 知道总体的标准差：
 $$
-SE\overline{x} = \frac{\theta}{\sqrt{n}}
+SE(\overline{x}) = \frac{\theta}{\sqrt{n}}
 $$
 如果不知道总计的标准差，用样本的标准差的无偏估计：
 $$
-SE\overline{x} = \frac{s}{\sqrt{n-1}}
+SE(\overline{x}) = \frac{s}{\sqrt{n-1}}
 $$
-* residual standard error:
+* residual standard error(剩余标准差、均方差):真实值和估计值之间差称为残差/剩余，则残差/剩余的标准差即为RSE.
+$$
+RSE = \frac{RSS}{n-2}
+$$
 
+### confidence intervals
+These SE can be used to compute **confidence intervals**. A 95% confidence intervals is defined as a range of values such that with 95% probabilite, the range will contain the true unknown value of the parameter.That is, there is approximately a 95% chance taht the interval will contain the true value of $$\beta_1$$
+$$
+[\hat \beat_1 - 2SE(\hat \beat_1), \hat \beat_1 + 2SE(\hat \beat_1)]
+$$
 
 
 ## References
