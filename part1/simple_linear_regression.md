@@ -18,4 +18,4 @@ $$
 $$\hat \beta_1 = \frac{\sum_{i=1}^n(x_i - \overline x)(y_i - \overline y)}{\sum_{i=1}^n(x_i - \overline x)^2}\\$$
 and
 $$\hat \beta_0 = \hat y - \hat{\beta_1}\overline{x}$$
-where $$\overline{y} = \frac{1}{n}\sum_{i=1}{n}y_i$$ and $$\overline{x} = \frac{1}{n}\sum_{i=1}{n}x_i$$
+where $$\overline{y} = \frac{1}{n}\sum_{i=1}^ny_i$$ and $$\overline{x} = \frac{1}{n}\sum_{i=1}^nx_i$$
