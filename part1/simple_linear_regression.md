@@ -41,7 +41,7 @@ SE\overline{x} = \frac{\theta}{\sqrt{n}}
 $$
 如果不知道总计的标准差，用样本的标准差的无偏估计：
 $$
-SE\overline{x} = \frac{s}{\sqrt{n}}
+SE\overline{x} = \frac{s}{\sqrt{n-1}}
 $$
 * residual standard error:
 
