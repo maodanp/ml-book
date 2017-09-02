@@ -8,9 +8,9 @@
 
 * We define the residual sum of squares\(RSS\) as
 $$
-RSS = e\_1^2 + e\_2^2 + ... + e\_n^2
+RSS = e_1^2 + e_2^2 + ... + e_n^2
 $$
-or equivalently as:
+or equivalently as:  
 $$
 RSS = (y_1 - \hat y_1)^2 + (y_2 - \hat y_2)^2 +  ... + (y_n - \hat y_n)^2
 $$
