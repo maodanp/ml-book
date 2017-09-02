@@ -8,17 +8,22 @@
 
 \* We define the residual sum of squares\(RSS\) as
 
-    $$
+```
+$$
 
-    RSS = e\_1^2 + e\_2^2 + ... + e\_n^2
+RSS = e\_1^2 + e\_2^2 + ... + e\_n^2
 
-    $$
+$$
 
-    or equivalently as:
+or equivalently as:
 
-    $$
+$$
 
-    RSS = \(y\_1 - \hat y\_1\)^2 + \(y\_2 - \hat y\_2\)^2 +  ... + \(\(y\_n - \hat y\_n\)^2
+RSS = \(y\_1 - \hat y\_1\)^2 + \(y\_2 - \hat y\_2\)^2 +  ... + \(\(y\_n - \hat y\_n\)^2
 
-    $$
+$$
+
+```
+
+
 
