@@ -30,6 +30,6 @@ In real applications, we have access to a set of observations from which we can 
 If we estimate $$\beta_0$$ and $$\beta_1$$ on the basis of a particular data set, then our estimates won't be exactly equal to $$\beta_0$$ and $$\beta_1$$, but if we could average the estimates obtained over a huge number of data sets, then the average of these estimates obtained over a huge number of data sets, then the average of these estimates would be spot on!  
 
 ### terms
-standard deviation(标准差): $$\theta = \sqrt(\frac{1}{N}\sum_{i=1}^N(x_i-u)^2)$$
+standard deviation(标准差): $$\theta = \sqrt (\frac{1}{N}\sum_{i=1}^N(x_i-u)^2)$$
 standard error(标准误差):
 residual standard error:
