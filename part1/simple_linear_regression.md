@@ -83,12 +83,12 @@ We call the $$|t|$$ p-value.
 It's natural to want to quantify the extent to which the model fits the data. The quality of a linear regression fit is typically assessed using two quantities: the residual standard error(RSE) and the $$R^2$$ statistic.
 
 ### Residual Standard Error
-The RSE is an estimate of the standard deviation.
+The RSE is an estimate of the standard deviation. whether or not the RSE is an acceptable prediction depends on the problem context.
 $$
 RSE = \sqrt{\frac{1}{n-2}RSS} = \sqrt{\frac{1}{n-2} \sum_{i=1}^2(y_i - \hat y_i)^2}
 $$
 where the residual sum-of-squares is $$RSS=\sum_{i=1}^2(y_i - \hat y_i)^2$$
-
+In advertising data set, the mean value of sales over all markets is approximately 14000 units, and so the preentage error is $$3260/14000=23%$$
 
 
 ## References
