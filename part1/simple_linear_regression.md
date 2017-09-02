@@ -85,9 +85,9 @@ It's natural to want to quantify the extent to which the model fits the data. Th
 ### Residual Standard Error
 The RSE is an estimate of the standard deviation.
 $$
-RSE = \sqrt{\frac{1}{n-2}RSS} = \sqrt{\frac{1}{n-2} \sum_{i=1}{n}(y_i - \hat y_i)^2$$}
+RSE = \sqrt{\frac{1}{n-2}RSS} = \sqrt{\frac{1}{n-2} \sum_{i=1}^2(y_i - \hat y_i)^2}
 $$
-where the residual sum-of-squares is $$RSS=\sum_{i=1}{n}(y_i - \hat y_i)^2$$
+where the residual sum-of-squares is $$RSS=\sum_{i=1}^2(y_i - \hat y_i)^2$$
 
 
 
