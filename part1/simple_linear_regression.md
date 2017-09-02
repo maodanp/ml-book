@@ -17,7 +17,7 @@ or equivalently as:
 
 $$
 
-RSS = \(y\_1 - \hat y\_1\)^2 + \(y\_2 - \hat y\_2\)^2 +  ... + \(\(y\_n - \hat y\_n\)^2
+RSS = (y_1 - \hat y_1)^2 + (y_2 - \hat y_2)^2 +  ... + (y_n - \hat y_n)^2
 
 $$
 
