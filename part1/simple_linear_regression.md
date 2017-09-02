@@ -37,7 +37,7 @@ $$
 * standard error(标准误差): 样本统计量（这里的样本统计量可以是平均数，标准差，相关系数等等）的标准差，衡量抽样样本（统计量）的误差。
 知道总体的标准差：
 $$
-SE\overline{x} = \frac{\Theta}{\sqrt{n}}
+SE\overline{x} = \frac{\theta}{\sqrt{n}}
 $$
 如果不知道总计的标准差，用样本的标准差的无偏估计：
 $$
