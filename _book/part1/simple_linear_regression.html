@@ -1,0 +1,372 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>simple linear regression · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linear Regression
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="simple_linear_regression.html">
+            
+                <a href="simple_linear_regression.html">
+            
+                    
+                    simple linear regression
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >simple linear regression</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="simple-linear-regression">Simple Linear Regression</h1>
+<h2 id="estimation-of-the-parameters-by-least-squares">Estimation of the parameters by least squares</h2>
+<ul>
+<li><p>By far the most common approach involves minimizing the<strong> least squares criterion</strong>.</p>
+</li>
+<li><p>Let <script type="math/tex; ">\hat y_i = \vec \beta_0 + \vec \beta_1x_1</script> be prediction for <script type="math/tex; ">Y</script> <script type="math/tex; ">x = y</script> based on the <script type="math/tex; ">i</script>th value of <script type="math/tex; ">X</script>.</p>
+</li>
+<li><p>Then <script type="math/tex; ">e_i = y_i - \hat y_i</script> represents the <script type="math/tex; ">i</script>th <strong>redisual</strong></p>
+</li>
+<li><p>We define the residual sum of squares(RSS) as
+<script type="math/tex; mode=display">
+RSS = e_1^2 + e_2^2 + ... + e_n^2
+</script>
+or equivalently as:<br><script type="math/tex; mode=display">
+RSS = (y_1 - \hat y_1)^2 + (y_2 - \hat y_2)^2 +  ... + (y_n - \hat y_n)^2
+</script></p>
+</li>
+<li>The least squares approach chooses <script type="math/tex; ">\hat \beta_0</script> and <script type="math/tex; ">\hat \beta_1</script> to minimize the RSS. The minimizing values can be shown to be
+<script type="math/tex; mode=display">
+\hat \beta_1 = \frac{\sum_{i=1}^n(x_i - \overline x)(y_i - \overline y)}{\sum_{i=1}^n(x_i - \overline x)^2}
+</script></li>
+</ul>
+<p><script type="math/tex; mode=display">
+\hat \beta_0 = \hat y - \hat{\beta_1}\overline{x}
+</script>
+where <script type="math/tex; ">\overline{y} = \frac{1}{n}\sum_{i=1}^ny_i</script> and <script type="math/tex; ">\overline{x} = \frac{1}{n}\sum_{i=1}^nx_i</script></p>
+<h2 id="assessing-the-accuracy-of-the-coefficient-estimates">Assessing the Accuracy of the Coefficient Estimates</h2>
+<p>In real applications, we have access to a set of observations from which we can compute the least squares line; however, the population regression line is unobserved, it&apos;s like the relationship between sample mean and population mean.
+If we estimate <script type="math/tex; ">\beta_0</script> and <script type="math/tex; ">\beta_1</script> on the basis of a particular data set, then our estimates won&apos;t be exactly equal to <script type="math/tex; ">\beta_0</script> and <script type="math/tex; ">\beta_1</script>, but if we could average the estimates obtained over a huge number of data sets, then the average of these estimates obtained over a huge number of data sets, then the average of these estimates would be spot on!  </p>
+<h3 id="terms">terms</h3>
+<ul>
+<li>standard deviation(&#x6807;&#x51C6;&#x5DEE;): &#x5373;&#x65B9;&#x5DEE;&#x7684;&#x6807;&#x51C6;&#x5316;&#xFF0C;&#x53CD;&#x6620;&#x6837;&#x672C;&#x7684;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#x3002;
+<script type="math/tex; mode=display">
+\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^N(x_i-u)^2}
+</script></li>
+<li>standard error(&#x6807;&#x51C6;&#x8BEF;&#x5DEE;): &#x6837;&#x672C;&#x7EDF;&#x8BA1;&#x91CF;&#xFF08;&#x8FD9;&#x91CC;&#x7684;&#x6837;&#x672C;&#x7EDF;&#x8BA1;&#x91CF;&#x53EF;&#x4EE5;&#x662F;&#x5E73;&#x5747;&#x6570;&#xFF0C;&#x6807;&#x51C6;&#x5DEE;&#xFF0C;&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x7B49;&#x7B49;&#xFF09;&#x7684;&#x6807;&#x51C6;&#x5DEE;&#xFF0C;&#x8861;&#x91CF;&#x62BD;&#x6837;&#x6837;&#x672C;&#xFF08;&#x7EDF;&#x8BA1;&#x91CF;&#xFF09;&#x7684;&#x8BEF;&#x5DEE;&#x3002;
+&#x77E5;&#x9053;&#x603B;&#x4F53;&#x7684;&#x6807;&#x51C6;&#x5DEE;&#xFF1A;
+<script type="math/tex; mode=display">
+SE(\overline{x}) = \frac{\sigma}{\sqrt{n}}
+</script>
+&#x5982;&#x679C;&#x4E0D;&#x77E5;&#x9053;&#x603B;&#x8BA1;&#x7684;&#x6807;&#x51C6;&#x5DEE;&#xFF0C;&#x7528;&#x6837;&#x672C;&#x7684;&#x6807;&#x51C6;&#x5DEE;&#x7684;&#x65E0;&#x504F;&#x4F30;&#x8BA1;&#xFF1A;
+<script type="math/tex; mode=display">
+SE(\overline{x}) = \frac{s}{\sqrt{n-1}}
+</script></li>
+<li>residual standard error(&#x5269;&#x4F59;&#x6807;&#x51C6;&#x5DEE;&#x3001;&#x5747;&#x65B9;&#x5DEE;):&#x771F;&#x5B9E;&#x503C;&#x548C;&#x4F30;&#x8BA1;&#x503C;&#x4E4B;&#x95F4;&#x5DEE;&#x79F0;&#x4E3A;&#x6B8B;&#x5DEE;/&#x5269;&#x4F59;&#xFF0C;&#x5219;&#x6B8B;&#x5DEE;/&#x5269;&#x4F59;&#x7684;&#x6807;&#x51C6;&#x5DEE;&#x5373;&#x4E3A;RSE.
+<script type="math/tex; mode=display">
+RSE = \frac{RSS}{n-2}
+</script></li>
+</ul>
+<h3 id="se-for-slop-and-intercept">SE for slop and intercept</h3>
+<p><script type="math/tex; mode=display">
+SE(\hat{\beta_0})^2 = \sigma^2[\frac{1}{n} + \frac{\overline{x}^2}{\sum_{i=1}^n(x_i - \overline{x})^2}]
+</script>
+<script type="math/tex; mode=display">
+SE(\hat{\beta_1})^2 = \frac{\sigma^2}{\sum_{i=1}^n(x_i - \overline{x})^2}
+</script></p>
+<h3 id="confidence-intervals">confidence intervals</h3>
+<p>These SE can be used to compute <strong>confidence intervals</strong>. A 95% confidence intervals is defined as a range of values such that with 95% probability, the range will contain the true unknown value of the parameter.That is, there is approximately a 95% chance that the interval will contain the true value of <script type="math/tex; ">\beta_1</script>
+<script type="math/tex; mode=display">
+[\hat{\beta_1} - 2SE(\hat{\beta_1}), \hat{\beta_1} + 2SE(\hat{\beta_1})]
+</script></p>
+<h3 id="hypothesis-testing">Hypothesis Testing</h3>
+<p>In the case of the advertising data, 95% confidence interval for <script type="math/tex; ">\beta_0</script> is [6.130, 7.935] and the 95% confidence interval for <script type="math/tex; ">\beta_1</script> is [0.042, 0,053]. Therefore, we can conclude that in the absence of any advertising, sales will(on average), fall somewhere between 6130 and 7940 units.
+SE can also be used to preform <strong>hypothesis tests</strong> on the coefficients.The most common hypothesis test involves testing the null hypothesis of(There is no relationship between X and Y):
+<script type="math/tex; mode=display">
+H_0 : \beta_1 = 0
+</script>
+versus the alternative hypothesis(There is some relationship between X and Y):
+<script type="math/tex; mode=display">
+H_a : \beta_1 \neq 0
+</script>
+We compute a t-statistic give by:
+<script type="math/tex; mode=display">
+t = \frac{\hat{\beta_1} - 0}{SE(\hat{\beta_1})}
+</script>
+which measures the number of standard deviations that <script type="math/tex; ">\hat \beta_1</script> is away from 0.
+We call the <script type="math/tex; ">|t|</script> p-value.</p>
+<h2 id="assessing-the-accuracy-of-the-model">Assessing the Accuracy of the Model</h2>
+<p>It&apos;s natural to want to quantify the extent to which the model fits the data. The quality of a linear regression fit is typically assessed using two quantities: the residual standard error(RSE) and the <script type="math/tex; ">R^2</script> statistic.</p>
+<h3 id="residual-standard-error">Residual Standard Error</h3>
+<p>The RSE is an estimate of the standard deviation. whether or not the RSE is an acceptable prediction depends on the problem context.
+<script type="math/tex; mode=display">
+RSE = \sqrt{\frac{1}{n-2}RSS} = \sqrt{\frac{1}{n-2} \sum_{i=1}^2(y_i - \hat y_i)^2}
+</script>
+where the residual sum-of-squares is <script type="math/tex; ">RSS=\sum_{i=1}^2(y_i - \hat y_i)^2</script>
+The RSE is considered a measure of the lack of the model to the data(&#x6A21;&#x578B;&#x5BF9;&#x6570;&#x636E;&#x662F;&#x5426;&#x5408;&#x9002;&#x7684;&#x4E00;&#x79CD;&#x5EA6;&#x91CF;):</p>
+<ul>
+<li>if the predictions obtained using the model are very close to the true outcome value, we can conclde that the model fits the data very well.</li>
+<li>on the other hand, RSE may be quite large, indicating that the model doesn&apos;t fit the data well.
+In advertising data set, the mean value of sales over all markets is approximately 14000 units, and so the preentage error is <script type="math/tex; ">3260/14000=23\%</script></li>
+</ul>
+<h3 id="r2-statistics"><script type="math/tex; ">R^2</script> Statistics</h3>
+<p>The RSE provides an absolute measure, it takes the form of a proportion&#x2014;&#x2014;the proportion of variance explained:
+<script type="math/tex; mode=display">
+R^2 = \frac{TSS - RSS}{TSS} = 1 - \frac{RSS}{TSS}
+</script></p>
+<ul>
+<li><script type="math/tex; ">TSS = \sum(y_i - \overline{y})^2</script> is the total sum of squares, which measures the total variance in the response <script type="math/tex; ">Y</script>, and can be thought of as the amount of variability inherent in the response before the regression is performed(&#x4E00;&#x79CD;&#x5728;regression &#x6267;&#x884C;&#x524D;&#x54CD;&#x5E94;&#x4E2D;&#x56FA;&#x6709;&#x7684;&#x53D8;&#x91CF;)</li>
+<li><script type="math/tex; ">RSS=\sum_{i=1}^2(y_i - \hat y_i)^2</script> is the residual sum-of-squares, which measures the amount of variability that is left unexplained after performing the regression(&#x6267;&#x884C;&#x5B8C;regression&#x540E;&#x4E0D;&#x660E;&#x539F;&#x56E0;/&#x4E0D;&#x53EF;&#x89E3;&#x91CA;&#x7684;&#x53D8;&#x91CF;)</li>
+<li>An <script type="math/tex; ">R^2</script> statistic that is close to 1 indicates that a large proportion of the variability in the response has been explained by the regression</li>
+<li>A number near 0 indicates that the regression did&apos;t explain much of the variability in the response; this might occur because the linear model is wrong, or the inherent error <script type="math/tex; ">\sigma^2</script> is high, or both</li>
+</ul>
+<h2 id="references">References</h2>
+<p><a href="https://www.zhihu.com/question/21925923" target="_blank">standard deviation &#x548C;standard error&#x7684;&#x533A;&#x522B;</a>
+<a href="http://online.stanford.edu/course/statistical-learning-winter-2014" target="_blank">Stastical Learning ch2</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Linear Regression">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"simple linear regression","level":"1.2.1","depth":2,"previous":{"title":"Linear Regression","level":"1.2","depth":1,"path":"part1/README.md","ref":"part1/README.md","articles":[{"title":"simple linear regression","level":"1.2.1","depth":2,"path":"part1/simple_linear_regression.md","ref":"part1/simple_linear_regression.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","livereload"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part1/simple_linear_regression.md","mtime":"2017-09-02T06:56:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-02T07:15:40.342Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
