@@ -1,10 +1,10 @@
 # Simple Linear Regression
 
-\* By far the most common approach involves minimizing the \*least squares criterion\*.
+\* By far the most common approach involves minimizing the** least squares criterion**.
 
 \* Let $$\hat y_i = \vec \beta_0 + \vec \beta_1x_1$$ be prediction for $$Y$$ $$x = y$$ based on the $$i$$th value of $$X$$.
 
-\* Then $$e_i = y_i - \hat y_i$$ represents the $$i$$th \*redisual\*
+\* Then $$e_i = y_i - \hat y_i$$ represents the $$i$$th **redisual**
 
 \* We define the residual sum of squares\(RSS\) as
 
