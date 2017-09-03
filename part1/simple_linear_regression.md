@@ -77,7 +77,7 @@ $$
 t = \frac{\hat{\beta_1} - 0}{SE(\hat{\beta_1})}
 $$
 which measures the number of standard deviations that $$\hat \beta_1$$ is away from 0.
-We call the $$|t|$$ p-value.
+We call the $$|t|$$ p-value. If we see a small p-value, then we can infer that there is an association between the predictor and the repsone.
 
 ## Assessing the Accuracy of the Model
 It's natural to want to quantify the extent to which the model fits the data. The quality of a linear regression fit is typically assessed using two quantities: the residual standard error(RSE) and the $$R^2$$ statistic.
@@ -99,12 +99,16 @@ $$
 R^2 = \frac{TSS - RSS}{TSS} = 1 - \frac{RSS}{TSS}
 $$
 * $$TSS = \sum(y_i - \overline{y})^2$$ is the total sum of squares, which measures the total variance in the response $$Y$$, and can be thought of as the amount of variability inherent in the response before the regression is performed(一种在regression 执行前响应中固有的变量)
-* $$RSS=\sum_{i=1}^2(y_i - \hat y_i)^2$$ is the residual sum-of-squares, which measures the amount of variability that is left unexplained after performing the regression(执行完regression后不明原因/不可解释的变量)
+* $$RSS=\sum_{i=1}^2(y_i - \hat y_i)^2$$ is the residual sum of squares, which measures the amount of variability that is left unexplained after performing the regression(执行完regression后不明原因/不可解释的变量)
 * An $$R^2$$ statistic that is close to 1 indicates that a large proportion of the variability in the response has been explained by the regression
 * A number near 0 indicates that the regression did't explain much of the variability in the response; this might occur because the linear model is wrong, or the inherent error $$\sigma^2$$ is high, or both
 
 
 ## References
+[p value](http://blog.sina.com.cn/s/blog_61f013b801011h55.html)
+
+[hypothesis testing](https://statistics.laerd.com/statistical-guides/hypothesis-testing-3.php)
 
 [standard deviation 和standard error的区别](https://www.zhihu.com/question/21925923)
+
 [Stastical Learning ch2](http://online.stanford.edu/course/statistical-learning-winter-2014)
