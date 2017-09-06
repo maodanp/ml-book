@@ -7,7 +7,7 @@ $$
 
 * Given estimates $$\hat{\beta_0},\hat{\beta_1}...\hat{\beta_p}$$, we can make predictions using the formula:
 $$
-\hat{y} = \hat{\beta_0} + \hat{\beta_1} + ... + \hat{\beta_p}
+\hat{y} = \hat{\beta_0} + \hat{\beta_1}x_1 + ... + \hat{\beta_p}x_p
 $$
 * We estimate $$\beta_0, \beta_1,...\beta_p$$ as the values that minimize the sum of squared residuals,This is done using standard statistical software:
 $$

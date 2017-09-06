@@ -77,7 +77,7 @@ $$
 t = \frac{\hat{\beta_1} - 0}{SE(\hat{\beta_1})}
 $$
 which measures the number of standard deviations that $$\hat \beta_1$$ is away from 0.
-We call the $$|t|$$ p-value. If we see a small p-value, then we can infer that there is an association between the predictor and the repsone.
+We call the $$|t|$$ p-value. If we see a small p-value, then we can infer that there is an association between the predictor and the response.
 
 ## Assessing the Accuracy of the Model
 It's natural to want to quantify the extent to which the model fits the data. The quality of a linear regression fit is typically assessed using two quantities: the residual standard error(RSE) and the $$R^2$$ statistic.
@@ -89,9 +89,9 @@ RSE = \sqrt{\frac{1}{n-2}RSS} = \sqrt{\frac{1}{n-2} \sum_{i=1}^2(y_i - \hat y_i)
 $$
 where the residual sum-of-squares is $$RSS=\sum_{i=1}^2(y_i - \hat y_i)^2$$
 The RSE is considered a measure of the lack of the model to the data(模型对数据是否合适的一种度量):
-* if the predictions obtained using the model are very close to the true outcome value, we can conclde that the model fits the data very well.
+* if the predictions obtained using the model are very close to the true outcome value, we can conclude that the model fits the data very well.
 * on the other hand, RSE may be quite large, indicating that the model doesn't fit the data well.
-In advertising data set, the mean value of sales over all markets is approximately 14000 units, and so the preentage error is $$3260/14000=23\%$$
+In advertising data set, the mean value of sales over all markets is approximately 14000 units, and so the percentage error is $$3260/14000=23\%$$
 
 ### $$R^2$$ Statistics
 The RSE provides an absolute measure, it takes the form of a proportion——the proportion of variance explained:

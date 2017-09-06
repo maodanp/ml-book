@@ -3,3 +3,4 @@
     * [simple linear regression](part2/simple_linear_regression.md)
     * [multiple linear regression](part2/multiple_linear_regression.md)
     * [consideration in the regression model](part2/considerations_in_the_regression_model.md)
+    * [the marketing plan](part2/the_marketing_plan.md)
