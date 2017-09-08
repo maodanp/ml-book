@@ -83,4 +83,26 @@ Once we have fit the multiple regression model, it's straightforward to apply fo
 The inaccuracy in the coefficient estimates is related to the *reducible error* from Ch2, we can compute a confidence interval in order to determine how close $$\hat Y$$ will to be $$f(X)$$.
 2. In practice assuming a linear model for $$f(X)$$ is almost always an approximation of reality, so there is an additional source of potentially reducible error which we call *model bias*.
 3. Even if we knew $$f(X)$$--that is, even if we knew the true value for $${\beta_0},{\beta_1},...,{\beta_p}$$ -- the response value can't be predicted perfectly because of the random error $$\epsilon$$ in the model, we referred to this as the *irreducible error*. How much will Y vary from $$\hat Y$$?
-> Prediction intervals are always wider than confidence intervals, because they incorporate both the error in the estimate for f(x)(the reducible error) and the uncertainty as to hot much an individual point will differ from the population regression plane(the irreducible error).
+> Prediction intervals are always wider than confidence intervals, because they incorporate both the error in the estimate for f(x)(the reducible error) and the uncertainty as to how much an individual point will differ from the population regression plane(the irreducible error).
+
+If we have a normal distribution with mean u and standard deviation $$\sigma$$, then for a single observation X,
+$$
+Z=\frac{X-\mu}{\sigma}
+$$
+$$
+Pr\{-1.96 \leq \frac{X-\mu}{\sigma} \leq 1.96\} = 0.95
+$$
+$$
+Pr\{\mu-1.96\sigma \leq X \leq \mu + 1.96\sigma\} = 0.95
+$$
+So, $$(\mu - 1.96\sigma, \mu + 1.96\sigma)$$ is a **predict** interval for X, just as:
+$$
+(\mu - 1.96\frac{\sigma}{\sqrt n}, \mu + 1.96\frac{\sigma}{\sqrt n})
+$$
+is a predictive interval for $$\overline X$$,and
+$$
+(\overline X - 1.96\frac{\sigma}{\sqrt{n}}, \overline X + 1.96\frac{\sigma}{\sqrt{n}})
+$$
+is a confidence interval for $$\mu$$
+## References
+[Predictive interval](https://www.youtube.com/watch?v=gNIpR8bdgUo)

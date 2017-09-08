@@ -1,17 +1,19 @@
 library(MASS)
 library(ISLR)
 ### Simple linear regression
+#fix(Boston)
 names(Boston)
 ?Boston
 plot(medv~lstat, Boston)
 fit1=lm(medv~lstat, data=Boston)
 fit1
 summary(fit1)
+#abline(fit1, lwd=3, col='red', pch=20)
 abline(fit1, col='red')
 names(fit1)
 confint(fit1)
 predict(fit1, data.frame(lstat=c(5,10,15)), interval='confidence')
-
+predict(fit1, data.frame(lstat=c(5,10,15)), interval='prediction')
 ###Multiple linear regression
 fit2=lm(medv~lstat+age, data=Boston)
 summary(fit2)
