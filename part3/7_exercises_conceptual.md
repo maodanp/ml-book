@@ -1,3 +1,4 @@
+## Conceptual
 (1). describe the null hypothesis to which the p-values given in Table 3.4 correspond.
 
 The null hypothesis for "TV" is that in the presence of radio ads and newspaper ads,TV ads has no effect on sales(there are similar null hypothesis for radio, newspaper). The low p-values of TV and radio suggest that the null hypothesis are false for TV and radio, the high p-values of newspaper suggests that the null hypothesis is true for newspaper.

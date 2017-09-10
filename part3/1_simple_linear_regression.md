@@ -47,6 +47,26 @@ $$
 $$
 RSE = \frac{RSS}{n-2}
 $$
+* $$\chi_2$$ distribution
+
+$$
+X \sim N(\mu, \sigma^2)
+$$
+则显然有：
+$$
+\sum_{i=1}^n(\frac{X_i-\mu}{\sigma})^2 \sim \chi^2(n)
+$$
+与之比较类似的形式:
+$$
+\sum_{i=1}^n(\frac{X_i-\overline X}{\sigma})^2 \sim \chi^2(n-1)
+$$
+$$\overline X$$ 是一个与 $$X_i$$相关的随机变量，相关性被抵消，所以**随机性**下降了。
+
+统计学中的**average**和**mean**是两种不同的概念。
+* 前者是基于一定数量的样本通过求平均值得出的summary statistics,是样本统计量(Sample statistics)的样本均值；后者是作为总体参数（Population parameter）的总体均值.
+* 后者求解往往需要先知道这个population服从于什么分布.
+
+但现实生活当中我们无法从小样本中得知这个总体是服从什么分布的，只能用算数平均值来代替。这样一来,当你知道样本总和（n*样本均值）时，只知道其中n-1个值就可以推出剩下的一个是多少了，也就是说只有一个是不自由的。求样本标准差时我们只知道样本均值所以除以（n-1）,求总体标准差时我们知道总体均值所以除以n.
 
 
 ### SE for slop and intercept
@@ -73,12 +93,21 @@ versus the alternative hypothesis(There is some relationship between X and Y):
 $$
 H_a : \beta_1 \neq 0
 $$
+To test the null hypothesis, we need to determine whether $$\hat \beta_1$$(estimate for $$\beta_1$$) is far from zero that we can confident that $$\beta_1$$ is non-zero.
+
 We compute a t-statistic give by:
 $$
 t = \frac{\hat{\beta_1} - 0}{SE(\hat{\beta_1})}
 $$
-which measures the number of standard deviations that $$\hat \beta_1$$ is away from 0.
-We call the $$|t|$$ p-value. If we see a small p-value, then we can infer that there is an association between the predictor and the response.
+which measures the number of standard deviations that $$\hat \beta_1$$ is away from 0.If there really is no relationship between X and Y, then we expect that the formal formula will have a t-distribution with n-2 degrees of freedom.
+
+p值是Fisher先提出来的“显著性检验”理论体系中的概念：
+* 有一个命题，称之为”零假设“（null hypothesis）$$H_0$$；
+* 找到一个统计量T，可以计算T的统计分布；
+* 一次试验结果可以计算得到一个确切的T值（$$T_0$$），在$$H_0$$成立的情况下，出现比$$T_0$$更极端情况的概率值记作p值
+* 如果p很小，则可以作为”零假设并不成立“的有力证据。
+
+Consequently, it is a simple matter to compute the probability of observing any value equal to $$|t|$$ or larger, assuming $$\beta_1 = 0$$. We call this probability the **p-value**. If we see a small p-value, then we can infer that there is an association between the predictor and the response.
 
 ## Assessing the Accuracy of the Model
 It's natural to want to quantify the extent to which the model fits the data. The quality of a linear regression fit is typically assessed using two quantities: the residual standard error(RSE) and the $$R^2$$ statistic.
@@ -106,10 +135,16 @@ $$
 
 
 ## References
-[p value](http://blog.sina.com.cn/s/blog_61f013b801011h55.html)
+[如何理解自由度](https://www.zhihu.com/question/20983193)
 
-[hypothesis testing](https://statistics.laerd.com/statistical-guides/hypothesis-testing-3.php)
+[卡方分布](http://publish.get.com.tw/bookpre_pdf/G1680A-1.PDF)
 
 [standard deviation 和standard error的区别](https://www.zhihu.com/question/21925923)
+
+[p value](http://blog.sina.com.cn/s/blog_61f013b801011h55.html)
+
+[统计学假设检验中 p 值的含义具体是什么](https://www.zhihu.com/question/23149768)
+
+[hypothesis testing](https://statistics.laerd.com/statistical-guides/hypothesis-testing-3.php)
 
 [Stastical Learning ch2](http://online.stanford.edu/course/statistical-learning-winter-2014)
