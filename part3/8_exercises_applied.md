@@ -499,14 +499,157 @@ $$\beta_0 = 2.1305, \beta_1 = 1.4396, \beta_2 = 1.0072$$
 
 The regression coefficients are close to the true coefficients, although with high standard error. We can reject the null hypothesis for $$\beta_1$$ because its p-value is below 5%. We cannot reject the null hypothesis for $$\beta_2$$ because its p-value is much above the 5% typical cutoff, over 60%.
 
+(14.d) Now fit a least squares regression to predict y using only x1. Comment on your results. Can you reject the null hypothesis $$H_0:\beta_1 = 0$$?
+~~~
+lm.fit = lm(y~x1)
+summary(lm.fit)
+~~~
+Yes, we can reject the null hypothesis for the regression coefficient given the p-value for its t-statistic is near zero.
+
+(14.e)Now fit a least squares regression to predict y using only x2. Comment on your results. Can you reject the null hypothesis $$H_0:\beta_1 = 0$$?
+~~~
+lm.fit = lm(y~x2)
+summary(lm.fit)
+~~~
+Yes, we can reject the null hypothesis for the regression coefficient given the p-value for its t-statistic is near zero.
+
+(14.f)Do the results obtained in (c)–(e) contradict each other? Explain your answer.
+
+No, because x1 and x2 have collinearity, it is hard to distinguish their effects when regressed upon together. When they are regressed upon separately, the linear relationship between y and each predictor is indicated more clearly.
+
+(14.g) Now suppose we obtain one additional observation, which was unfortunately mismeasured.
+~~~
+x1 = c(x1, 0.1)
+x2 = c(x2, 0.8)
+y = c(y, 6)
+~~~
+Re-fit the linear models from (c) to (e) using this new data. What effect does this new observation have on the each of the models? In each model, is this observation an outlier? A high-leverage point? Both? Explain your answers.
+~~~
+lm.fit1 = lm(y~x1+x2)
+summary(lm.fit1)
+
+lm.fit2 = lm(y~x1)
+summary(lm.fit2)
+
+lm.fit3 = lm(y~x2)
+summary(lm.fit3)
+
+par(mfrow=c(2,2))
+plot(lm.fit1)
+
+par(mfrow=c(2,2))
+plot(lm.fit2)
+
+par(mfrow=c(2,2))
+plot(lm.fit3)
+~~~
+In the first and third models, the point becomes a high leverage point.
+~~~
+plot(predict(lm.fit1), rstudent(lm.fit1))
+plot(predict(lm.fit2), rstudent(lm.fit2))
+plot(predict(lm.fit3), rstudent(lm.fit3))
+~~~
+Looking at the studentized residuals, we don’t observe points too far from the |3| value cutoff, except for the second linear regression: y ~ x1.
+
+(15) This problem involves the Boston data set, which we saw in the lab for this chapter. We will now try to predict per capita crime rate using the other variables in this data set. In other words, per capita crime rate is the response, and the other variables are the predictors.
 
 
+(15.a) For each predictor, fit a simple linear regression model to predict the response. Describe your results. In which of the models is there a statistically significant association between the predictor and the response? Create some plots to back up your assertions.
+~~~
+library(MASS)
+summary(Boston)
 
+Boston$chas <- factor(Boston$chas, labels = c("N","Y"))
+summary(Boston)
 
+attach(Boston)
+lm.zn = lm(crim~zn)
+summary(lm.zn) # yes
+summary(lm.indus) # yes
+summary(lm.chas) # no
+summary(lm.nox) # yes
+summary(lm.rm) # yes
+summary(lm.age) # yes
+summary(lm.dis) # yes
+summary(lm.rad) # yes
+summary(lm.tax) # yes
+summary(lm.ptratio) # yes
+summary(lm.black) # yes
+summary(lm.lstat) # yes
+summary(lm.medv) # yes
+~~~
+All, except chas. Plot each linear regression using “plot(lm)” to see residuals.
 
+(15.b) Fit a multiple regression model to predict the response using all of the predictors. Describe your results. For which predictors can we reject the null hypothesis $$H_0:\beta_1 = 0$$?
+~~~
+lm.all = lm(crim~., data=Boston)
+summary(lm.all)
+~~~
+zn, dis, rad, black, medv
 
+(15.c) How do your results from (a) compare to your results from (b)? Create a plot displaying the univariate regression coefficients from (a) on the x-axis, and the multiple regression coefficients from (b) on the y-axis. That is, each predictor is displayed as a single point in the plot. Its coefficient in a simple linear regres- sion model is shown on the x-axis, and its coefficient estimate in the multiple linear regression model is shown on the y-axis.
+~~~
+x = c(coefficients(lm.zn)[2],
+      coefficients(lm.indus)[2],
+      coefficients(lm.chas)[2],
+      coefficients(lm.nox)[2],
+      coefficients(lm.rm)[2],
+      coefficients(lm.age)[2],
+      coefficients(lm.dis)[2],
+      coefficients(lm.rad)[2],
+      coefficients(lm.tax)[2],
+      coefficients(lm.ptratio)[2],
+      coefficients(lm.black)[2],
+      coefficients(lm.lstat)[2],
+      coefficients(lm.medv)[2])
+y = coefficients(lm.all)[2:14]
+plot(x, y)
+~~~
+Coefficient for nox is approximately -10 in univariate model and 31 in multiple regression model.
 
+(15.d) Is there evidence of non-linear association between any of the predictors and the response? To answer this question, for each predictor X, fit a model of the form
+$$
+Y = \beta_0 + \beta_1X + \beta_2X^2 + \beta_3X^3 + \epsilon
+$$
+~~~
+lm.zn = lm(crim~poly(zn,3))
+summary(lm.zn) # 1, 2
 
+lm.indus = lm(crim~poly(indus,3))
+summary(lm.indus) # 1, 2, 3
+
+# lm.chas = lm(crim~poly(chas,3)) : qualitative predictor
+lm.nox = lm(crim~poly(nox,3))
+summary(lm.nox) # 1, 2, 3
+
+lm.rm = lm(crim~poly(rm,3))
+summary(lm.rm) # 1, 2
+
+lm.age = lm(crim~poly(age,3))
+summary(lm.age) # 1, 2, 3
+
+lm.dis = lm(crim~poly(dis,3))
+summary(lm.dis) # 1, 2, 3
+
+lm.rad = lm(crim~poly(rad,3))
+summary(lm.rad) # 1, 2
+
+lm.tax = lm(crim~poly(tax,3))
+summary(lm.tax) # 1, 2
+
+lm.ptratio = lm(crim~poly(ptratio,3))
+summary(lm.ptratio) # 1, 2, 3
+
+lm.black = lm(crim~poly(black,3))
+summary(lm.black) # 1
+
+lm.lstat = lm(crim~poly(lstat,3))
+summary(lm.lstat) # 1, 2
+
+lm.medv = lm(crim~poly(medv,3))
+summary(lm.medv) # 1, 2, 3
+~~~
+See inline comments above, the answer is yes for most, except for black and chas.
 
 ## Reference
 [q-q plots](http://onlinestatbook.com/2/advanced_graphs/q-q_plots.html)
