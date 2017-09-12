@@ -132,3 +132,56 @@ plot(x, y)
 abline(lm.fit, lwd=3, col=2)
 abline(-1, 0.5, lwd=3, col=3)
 legend(-1, legend = c("model fit", "pop. regression"), col=2:3, lwd=3)
+
+
+lm.fit2=lm(y~x+I(x^2))
+summary(lm.fit2)
+
+
+set.seed(1)
+eps1 = rnorm(100, 0, 0.125)
+x1 = rnorm(100)
+y1 = -1 + 0.5*x1 + eps1
+plot(x1, y1)
+lm.fit1 = lm(y1~x1)
+summary(lm.fit1)
+abline(lm.fit1, lwd=3, col=2)
+abline(-1, 0.5, lwd=3, col=3)
+legend(-1, legend = c("model fit", "pop. regression"), col=2:3, lwd=3)
+
+set.seed(1)
+eps1 = rnorm(100, 0, 0.5)
+x1 = rnorm(100)
+y1 = -1 + 0.5*x1 + eps1
+plot(x1, y1)
+lm.fit1 = lm(y1~x1)
+summary(lm.fit1)
+
+abline(lm.fit1, lwd=3, col=2)
+abline(-1, 0.5, lwd=3, col=3)
+legend(-1, legend = c("model fit", "pop. regression"), col=2:3, lwd=3)
+
+## applied no.14.
+set.seed(1)
+x1=runif(100)
+x2=0.5*x1+rnorm(100)/10
+y=2+2*x1+0.3*x2+rnorm(100)
+cor(x1, x2)
+plot(x1, x2)
+
+lm.fit = lm(y~x1+x2)
+summary(lm.fit)
+
+lm.fit = lm(y~x1)
+summary(lm.fit)
+
+lm.fit = lm(y~x2)
+summary(lm.fit)
+
+## applied no.15.
+library(MASS)
+attach(Boston)
+lm.fit=lm(crim~., data=Boston)
+summary(lm.fit)
+coefficients(lm.fit)[2]
+

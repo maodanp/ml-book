@@ -1,2 +1,2 @@
-# ch2 Linear Regression
+# ch3 Linear Regression
 Linear Regression is an simple and important ml algorithm.

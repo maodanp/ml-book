@@ -23,3 +23,7 @@ summary(lm.fit1)
 
 par(mfrow=c(2,2))
 plot(lm.fit1)
+
+x = runif(100, -50, 50)
+y=exp(x)
+plot(x,y)
