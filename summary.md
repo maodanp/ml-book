@@ -12,3 +12,4 @@
     * [overview of classification](part4/1_overview.md)
     * [logistic regression](part4/3_logistic_regression.md)
     * [linear discriminant analysis](part4/4_linear_discriminant_analysis.md)
+    * [Comparsion of Classification Methods](part4/5_comparison_of_classification_methods.md)
