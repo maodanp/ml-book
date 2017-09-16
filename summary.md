@@ -8,6 +8,7 @@
     * [lab: linear regression](part3/6_lab_linear_regression.md)
     * [Exercise Conceptual](part3/7_exercises_concepta.md)
     * [Exercise Applied](part3/8_exercises_applied.md)
- * [Linear Regression](part4/README.md)
+ * [Classification](part4/README.md)
     * [overview of classification](part4/1_overview.md)
     * [logistic regression](part4/3_logistic_regression.md)
+    * [linear discriminant analysis](part4/4_linear_discriminant_analysis.md)
