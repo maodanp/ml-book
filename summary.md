@@ -13,3 +13,4 @@
     * [logistic regression](part4/3_logistic_regression.md)
     * [linear discriminant analysis](part4/4_linear_discriminant_analysis.md)
     * [Comparsion of Classification Methods](part4/5_comparison_of_classification_methods.md)
+    * [lab: Logistic Regression, LDA, QDA, KNN](part4/6_lab_LDA_QDA_KNN.md)

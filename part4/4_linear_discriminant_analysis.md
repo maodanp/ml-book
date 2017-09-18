@@ -34,7 +34,7 @@ $$
 $$
 is largest.
 
-In practice, even if we are quite certain of our assumption that $$X$$ is drawn from a Gaussian distribution within each class, we still have to estimate the parameters $$u_1, ..., u_K, \pi_1,...,\pi_K, \sigma^2$$. The linear discriminant analysis method approximates the Bayes classifier by plugging estimates for $$pi_k, u_k, \sigma^2$$ into $$(4.13)$$.
+In practice, even if we are quite certain of our assumption that $$X$$ is drawn from a Gaussian distribution within each class, we still have to estimate the parameters $$u_1, ..., u_K, \pi_1,...,\pi_K, \sigma^2$$. The linear discriminant analysis method approximates the Bayes classifier by plugging estimates for $$\pi_k, u_k, \sigma^2$$ into $$(4.13)$$.
 
 In particular, the following estimates are used:
 $$
