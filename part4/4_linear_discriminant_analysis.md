@@ -25,7 +25,7 @@ f_k(x) = \frac{1}{\sqrt{2 \pi}\sigma_k}exp(-\frac{1}{2\sigma_k^2}(x-u_k)^2)
 $$
 where $$u_k$$ and $$\sigma_k^2$$ are the mean and variance parameters for the $$k$$th class. Let us further assume that $$\sigma_1^2 = \sigma_K^2$$.
 $$
-p_k(x) = \frac{\pi_k\frac{1}{\sqrt{2 \pi}\sigma_k}exp(-\frac{1}{2\sigma_k^2}(x-u_k)^2)}{\sum_{l=1}^K\frac{1}{\sqrt{2 \pi}\sigma_l}exp(-\frac{1}{2\sigma_k^2}(x-u_l)^2)}..............\text{4.12}
+p_k(x) = \frac{\pi_k\frac{1}{\sqrt{2 \pi}\sigma}e^{(-1/2\sigma^2)(x-u_k)^2}}{\sum_{l=1}^K\pi_l\frac{1}{\sqrt{2 \pi}\sigma}e^{(-1/2\sigma^2)(x-u_l)^2}}..............\text{4.12}
 $$
 
 Taking the log of $$(4.12)$$ and rerranging the terms, it is not hard to show that this is equivalent to assigning the observation to the class for which
