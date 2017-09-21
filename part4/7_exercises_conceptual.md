@@ -51,9 +51,9 @@ It is clear that if $$x \in [0.05,0.95] $$ then the observations we will use are
 If $$x<0.05$$, then we will use observations in the interval $$[0,x+0.05]$$ which represents a fraction of $$(100x+5)\%$$
 
 By a similar argument we conclude that if $$x>0.95$$, then the fraction of observations we will use is $$(105-100x)\%$$. To compute the average fraction we will use to make the prediction we have to evaluate the following expression:
-~~~
+$$
 \int_0.05^0.95 10dx + \int_0^0.05 (100x+5)dx + \int_0.95^1(105-100x)dx=9.75
-~~~
+$$
 the fraction of available observations we will use to make the prediction is
 $$9.75\%$$.
 
@@ -79,3 +79,49 @@ $$
 Now suppose that we wish to make a prediction for a test observation by creating a p-dimensional hypercube centered around the test observation that contains, on average, 10 % of the training observations. For $$p = 1,2$$, and 100, what is the length of each side of the hypercube? Comment on your answer.
 
 For $$p=1$$, we have $$l=0.1$$, for $$p=2$$, we have $$l=0.1^{1/2}$$, and for $$p=100$$, we have $$l=0.1^{1/100}$$.
+
+## Q5
+We now examine the differences between LDA and QDA.
+### 5.a
+If the Bayes decision boundary is linear, do we expect LDA or QDA to perform better on the training set? On the test set?
+
+If the Bayes decision boundary is linear, we expect QDA to perform better on the training set because its higher flexibility may yield a closer fit. On the test set, we expect LDA to perform better than QDA, because QDA could overfit the linearity on the Bayes decision boundary.
+
+### 5.b
+If the Bayes decision boundary is non-linear, do we expect LDA or QDA to perform better on the training set? On the test set?
+
+If the Bayes decision boundary is non-linear, we expect QDA to perform better both on the training and test sets.
+
+### 5.c
+In general, as the sample size n increases, do we expect the test prediction accuracy of QDA relative to LDA to improve, decline, or be unchanged? Why?
+
+Roughly speaking, QDA(which is more flexible than LDA and so has higher variance) is recommended if the training set is very large, so that the variance of the classifier is not a major concern.
+
+#### 5.d
+True or False: Even if the Bayes decision boundary for a given problem is linear, we will probably achieve a superior test error rate using QDA rather than LDA because QDA is flexible enough to model a linear decision boundary. Justify your answer.
+
+False, with fewer sample points, the variance from using a more flexible method such as QDA, may lead to overfit, which in turns may lead to an inferior test error rate.
+
+## Q6
+Suppose we collect data for a group of students in a statistics class with variables $$X_1$$ = hours studied, $$X_2$$ = undergrad GPA, and $$Y$$ = receive an A. We fit a logistic regression and produce estimated coefficient, $$\hat \beta_0=-6, \hat\beta_1=0.05, \hat\beta_2=1$$.
+
+### 6.a
+Estimate the probability that a student who studies for 40h and has an undergrad GPA of 3.5 gets an A in the class.
+
+
+### 6.b
+How many hours would the student in part (a) need to study to have a $$50 \%$$ chance of getting an A in the class?
+
+## Q7
+Suppose that we wish to predict whether a given stock will issue a dividend this year (“Yes” or “No”) based on X, last year’s percent profit. We examine a large number of companies and discover that the mean value of X for companies that issued a dividend was $$\hat X=10$$, while the mean for those that didn’t was $$\hat X=0$$. In addition, the variance of X for these two sets of companies was $$\delta^2=36$$. Finally, 80 % of companies issued dividends. Assuming that X follows a normal distribution, predict the probability that a company will issue a dividend this year given that its percentage profit was $$X=4$$ last year.
+
+If suffices to plug in the parameters and $$X$$ values in the equation for $$p_k(x)$$, we getting
+$$
+p_1(4)=\frac{0.8e^{-(1/72)(4-10)^2}}{1+0.8e^{-(1/72)(4-10)^2}}=0.752
+$$
+so the probability that a company will issue a dividend this year given that its percentage return was $$X=4$$ last year is 0.752
+
+## Q8
+Suppose that we take a data set, divide it into equally-sized training and test sets, and then try out two different classification procedures. First we use logistic regression and get an error rate of $$20\%$$ on the training data and $$30\%$$ on the test data. Next we use 1-nearest neighbors and get an average error rate (averaged over both test and training data sets) of $$18\%$$. Based on these results, which method should we prefer to use for classification of new observations? Why?
+
+ We have an average error rate of $$18\%$$ wich implies a test error rate of $$36\%$$ for KNN which is greater than the test error rate for logistic regression of $$30\%$$. So, it is better to choose logistic regression because of its lower test error rate.
