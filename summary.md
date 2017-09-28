@@ -15,3 +15,4 @@
     * [Comparsion of Classification Methods](part4/5_comparison_of_classification_methods.md)
     * [lab: Logistic Regression, LDA, QDA, KNN](part4/6_lab_LDA_QDA_KNN.md)
     * [Execrise Conceptual](part4/7_exercises_conceptual.md)
+    * [Execrise Applied](part4/8_exercises_applied.md)
