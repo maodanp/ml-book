@@ -16,3 +16,5 @@
     * [lab: Logistic Regression, LDA, QDA, KNN](part4/6_lab_LDA_QDA_KNN.md)
     * [Execrise Conceptual](part4/7_exercises_conceptual.md)
     * [Execrise Applied](part4/8_exercises_applied.md)
+ * [Resampling Methods](part5/README.md)
+    * [Cross Validation](part5/1_cross_validation.md)
