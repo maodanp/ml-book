@@ -62,3 +62,18 @@ $$
 CV_{n} = \frac{1}{n}\sum_{i=1}^nErr_i
 $$
 where $$Err_i=I(y_i \neq \hat y_i)$$
+
+## Bootstrap
+* The bootstrap is a flexible and powerful statistical tool that can be used to quantify the uncertainty associated with a given estimator or statistical learning method.
+* For example, it can provide an estimate of the standard error of a coefficient, or a confidence interval for that coefficient.
+
+### Real data
+* The procedure outlined above cannot be applied, because for real data we cannot generate new samples from the original population.
+* However, the bootstrap approach allows us to use a computer to mimic the process of obtaining new data sets, so that we can estimate the variability of our estimate without generating additional samples.
+* Rather than repeatedly obtaining independent data sets from the population, we instead obtain distinct data sets by repeatedly sampling observations from the original data set with **replacement**.
+* Each of "bootstrap data sets" is created by sampling **with replacement**, and is the **same size** as our original dataset.
+
+
+
+## References
+[bootstrap method为什么效果好](https://www.zhihu.com/question/38429969)

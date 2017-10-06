@@ -18,3 +18,6 @@
     * [Execrise Applied](part4/8_exercises_applied.md)
  * [Resampling Methods](part5/README.md)
     * [Cross Validation](part5/1_cross_validation.md)
+    * [lab: Cross-Validation and the Bootstrap](part5/2_lab_cross_validation_bootstrap.md)
+    * [Exercise Conceptual](part5/3_exercises_conceptual.md)
+    * [Exercise Applied](part5/4_exercises_applied.md)

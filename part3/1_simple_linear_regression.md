@@ -30,7 +30,7 @@ In real applications, we have access to a set of observations from which we can 
 If we estimate $$\beta_0$$ and $$\beta_1$$ on the basis of a particular data set, then our estimates won't be exactly equal to $$\beta_0$$ and $$\beta_1$$, but if we could average the estimates obtained over a huge number of data sets, then the average of these estimates obtained over a huge number of data sets, then the average of these estimates would be spot on!  
 
 ### terms
-* standard deviation(标准差): 即方差的标准化，反映样本的离散程度。
+* standard deviation(标准差): 即方差的标准化,*(总体)标准差*$$\sigma$$-*方差*$$\sigma^2$$的正平方根，反映样本的离散程度。
 $$
 \sigma = \sqrt{\frac{1}{N}\sum_{i=1}^N(x_i-u)^2}
 $$
@@ -42,6 +42,10 @@ $$
 如果不知道总计的标准差，用样本的标准差的无偏估计：
 $$
 SE(\overline{x}) = \frac{s}{\sqrt{n-1}}
+$$
+其中，样本标准差为
+$$
+s = \sqrt{\frac{1}{N-1}\sum_{i=1}^N(x_i-\overline x)^2}
 $$
 * residual standard error(剩余标准差、均方差):真实值和估计值之间差称为残差/剩余，则残差/剩余的标准差即为RSE.
 $$
@@ -140,6 +144,8 @@ $$
 [卡方分布](http://publish.get.com.tw/bookpre_pdf/G1680A-1.PDF)
 
 [standard deviation 和standard error的区别](https://www.zhihu.com/question/21925923)
+
+[standard deviation 和standard error](http://blog.csdn.net/ysuncn/article/details/1749729)
 
 [p value](http://blog.sina.com.cn/s/blog_61f013b801011h55.html)
 
