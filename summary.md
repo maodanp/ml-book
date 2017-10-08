@@ -1,4 +1,7 @@
 # bui# Summary
+ * [statistical Learning](part2/README.md)
+    * [What is Statistical Learning](part2/1_statistical_learning.md)
+    * [lab: introduction R](part2/3_lab_introduction_R.md)
  * [Linear Regression](part3/README.md)
     * [simple linear regression](part3/1_simple_linear_regression.md)
     * [multiple linear regression](part3/2_multiple_linear_regression.md)

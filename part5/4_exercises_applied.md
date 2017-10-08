@@ -296,7 +296,7 @@ t1* 22.53281 0.008517589   0.4119374
 ### 9.d
 Based on your bootstrap estimate from (c), provide a 95% confidence interval for the mean of medv. Compare it to the results obtained using **t.test(Boston$medv)**.
 
-Hint: You can approximate a 95 % confidence interval using the formula $$[\hat \mu − 2SE(\hat \mu), \hat \mu + 2SE(\hat \mu)]$$.
+Hint: You can approximate a 95 % confidence interval using the formula $$[\hat \mu-2SE(\hat \mu), \hat \mu + 2SE(\hat \mu)]$$.
 ~~~
 t.test(medv)
 
@@ -362,7 +362,3 @@ Bootstrap Statistics :
 t1*    12.75  0.0261   0.4912231
 ~~~
 We get an estimated tenth percentile value of 12.75 which is again equal to the value obtained in (g), with a standard error of 0.5113 which is relatively small compared to percentile value.
-
-
-
-### 9.h
