@@ -75,13 +75,83 @@ contour(x,y,fa,nlevels=15)
 * Alternatively, **persp()** can be used to produce a three-dimensional plot. The arguments **theta** and **phi** control the angles at which the plot is viewed.
 
 
-
-
-
 ## Indexing Data
-
+~~~
+A=matrix(1:16,4,4)
+A[2,3]
+A[c(1,3), c(2,4)]
+A[1:3, 2:4]
+A[1:2,]
+A[,1:2]
+~~~
+The use of a negative sign - in the index tells R to keep all rows or columns except those indicated in the index.
+~~~
+A[-c(1,3),]
+~~~
+The **dim()** function outputs the number of rows followed by the number of columns of a given matrix
+~~~
+dim(A)
+~~~
 
 ## Loading Data
+We can use the function **write.table()** to export data.Once the data has been loaded, the **fix()** function can be used to view it in a spreadsheet like window.
+~~~
+Auto = read.table("Auto.data")
+fix(Auto)
+~~~
 
+The data set also includes a number of missing observations, indicated by a question mark ?. Missing values are a common occurrence in real data sets.
+
+Using the option **header=T(or header=TRUE)** in the **read.table()** function tells R that the first line of the file contains the variable names, and using the option **na.strings** tells R that any time it sees a particular character or set of characters, it should be treated as a missing element of the data matrix.
+~~~
+Auto = read.table("Auto.data", header=T, na.strings="?")
+fix(Auto)
+dim(Auto)
+
+397 9
+~~~
+There are various ways to deal with the missing data, we choose to use the **na.omit()** function to simply remove these rows.
+~~~
+Auto=na.omit(Auto)
+dim(Auto)
+
+392 9
+~~~
+Once the data are loaded correctly, we can use **names()** to check the variable names
+~~~
+names(Auto)
+~~~
 
 ## Additional Graphical and Numerical Summaries
+The **as.factor()** function converts quantitative variables into qualitative variables.
+~~~
+attach(Auto)
+plot(cylinders, mpg)
+
+cylinders = as.factor(cylinders)
+~~~
+
+If the variable plotted on the x-axis is categorial, then *boxplots* will automatically be produced by the *plot()* function.
+~~~
+plot(cylinders, mpg)
+plot(cylinders, mpg, varwidth=T)
+~~~
+
+The **hist()** function can be used to plot a histogram.
+~~~
+hist(mpg)
+~~~
+
+The **pairs()** function creates a scatterplot matrix.
+~~~
+pairs(Auto)
+pairs(~ mpg + displacement + horsepower + weight + acceleration, Auto)
+~~~
+
+In conjunction with the **plot()** function, **identify()** provides a useful interactive method for identifying the value for a particular variable for points on a plot.
+~~~
+plot(horsepower, mpg)
+identify(horsepower, mpg, name)
+~~~
+
+The **summary()** function produces a numerical summary of each variable in a particular data set.
