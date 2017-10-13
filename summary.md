@@ -26,3 +26,5 @@
     * [lab: Cross-Validation and the Bootstrap](part5/2_lab_cross_validation_bootstrap.md)
     * [Exercise Conceptual](part5/3_exercises_conceptual.md)
     * [Exercise Applied](part5/4_exercises_applied.md)
+ * [Linear Model Selection and Regularization](part6/README.md)
+    * [Subset Selection](part6/1_subset_selection.md)
