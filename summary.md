@@ -28,3 +28,5 @@
     * [Exercise Applied](part5/4_exercises_applied.md)
  * [Linear Model Selection and Regularization](part6/README.md)
     * [Subset Selection](part6/1_subset_selection.md)
+    * [Shrinkage Methods](part6/2_shrinkage_methods.md)
+    * [Dimension Reduction Methods](part6/3_dimension_reduction_methods.md)
