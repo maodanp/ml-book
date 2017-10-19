@@ -2,6 +2,8 @@
 * As an alternative, we can fit a model containing all *p* predictors using a technique that *constrains* or *regularizes* the coefficient estimates, or equivalently, that *shrinks* the coefficient estimates towards zero.
 * It may not be immediately obvious why such a constraint should improve the fit, but it turns out that shrinking the coefficient estimate can significantly reduce their variance.
 
+>So unlike subset and forward stepwise regression, which controls the complexity of a model by restricting the number of variables, ridge regression keeps all the variables in and shrinks the coefficients towards zero.
+
 ## Ridge regression
 
 ### Basic knowledge
