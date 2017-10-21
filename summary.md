@@ -31,3 +31,5 @@
     * [Shrinkage Methods](part6/2_shrinkage_methods.md)
     * [Dimension Reduction Methods](part6/3_dimension_reduction_methods.md)
     * [lab: model selection](part6/4_lab_model_selection.md)
+    * [Exercise Conceptual](part6/5_exercises_conceptual.md)
+    * [Exercise Applied](part6/6_exercises_applied.md)

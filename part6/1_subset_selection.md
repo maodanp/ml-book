@@ -18,7 +18,7 @@ While best subset selection is a simple and conceptually appealing approach, it 
 
 * For computational reasons, best subset selection cannot be applied with very large $$p$$.
 * Best subset selection may also suffer from statistical problems when $$p$$ is large: **larger the search space, the higher the chance of finding models that look good on the training data**, even though they might not have any predictive power no the future data.
-* Thus an enormous search space can lead to *overfitting* and high variance of teh coefficient estimates.
+* Thus an enormous search space can lead to *overfitting* and high variance of the coefficient estimates.
 * For both of these reasons, *stepwise* methods, which explore a far more restricted set of models, are attractive alternatives to best subset selection.
 
 ### Forward Stepwise Selection
