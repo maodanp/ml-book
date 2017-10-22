@@ -33,3 +33,5 @@
     * [lab: model selection](part6/4_lab_model_selection.md)
     * [Exercise Conceptual](part6/5_exercises_conceptual.md)
     * [Exercise Applied](part6/6_exercises_applied.md)
+ * [Moving Beyond Linearity](part7/README.md)
+    * [Basis Functions](part7/1_basis_function.md)

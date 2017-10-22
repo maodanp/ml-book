@@ -16,3 +16,5 @@ There are many alternatives, both classical and modern, to using least squares t
 * *Dimension Reduction*.This approach involves projecting the $$p$$ predictors into a M-dimensional subspace, where $$M \lt p$$. This is achieved by computing $$M$$ different linear combinations, or projections, of the variables. Then these $$M$$ projections are used as predictors to fit a linear regression model by least squares.
 
 In the following sections we describe each of these approaches in greater detail, along with their advantages and disadvantages.
+
+BTW, we can improve upon least squares using ridge regression, the lasso, principal components regression, and other techniques. The improvement is obtained by reduce complexity of the linear model, and hence the variance of the estimates. But we are still using a linear model. In Chapter 7, we will relax the linearity assumption to move beyond linearity.
