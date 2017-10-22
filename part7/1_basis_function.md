@@ -1,4 +1,4 @@
-## 7.1 Polynomial Regression
+## Polynomial Regression
 
 A polynomial function :
 $$
@@ -12,11 +12,11 @@ Since $$\hat f(x_0)$$ is a linear function of the $$\hat \beta_l$$, can get a si
 
 Logistic regression follows naturally. For example, in figure we model:
 $$
-Pr(y_i \gt 250|x_i) = \frac{exp(\hat \beta0 + \hat \beta1x0 + \hat \beta2 x0^2 + \ldots +\hat \beta_jx0^j)}{1+exp(\hat \beta0 + \hat \beta1x0 + \hat \beta2 x0^2 + \ldots +\hat \beta_jx0^j)}
+Pr(y_i \gt 250|x_i) = \frac{exp(\hat \beta_0 + \hat \beta_1x_0 + \hat \beta_2 x_0^2 + \ldots +\hat \beta_jx_0^j)}{1+exp(\hat \beta_0 + \hat \beta_1x_0 + \hat \beta_2 x_0^2 + \ldots +\hat \beta_jx_0^j)}
 $$
 To get confidence intervals, compute upper and lowest bounds on the logit scale, and then invert to get on probability scale.
 
-## 7.2
+## Step Functions
 
 Using polynomial functions of the features as predictors in a linear model imposes a global structure on the non-linear function of $$X$$(将特征的多项式函数作为线性模型中的预测因子，对X的非线性函数施加全局结构). We can instead use *step functions* in order to avoid imposing such a global structure.
 
@@ -34,7 +34,7 @@ For a given value of $$X$$, at most one of $$C_1, C_2,\ldots,C_K$$ can be non-ze
 
 Unfortunately, unless there are natural breakpoints int the predictors, piecewise-constant functions can miss the action. Nevertheless, step function approaches are very popular in biostatistics and epidemiology, among other disciplines.
 
-## 7.3
+## Basis Functions
 
 Polynomial and piecewise-constant regression models are in fact special cases of a basis function approach. The idea is to have at hand a family of functions or transformations that can be applied to a variable $$X$$: $$b_1(X), b_2(X), \ldots, b_K(X)$$.
 $$
