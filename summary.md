@@ -36,3 +36,4 @@
  * [Moving Beyond Linearity](part7/README.md)
     * [Basis Functions](part7/1_basis_function.md)
     * [Regression Splines](part7/2_regression_splines.md)
+    * [Smoothing Splines](part7/3_smoothing_splines.md)
