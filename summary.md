@@ -37,3 +37,6 @@
     * [Basis Functions](part7/1_basis_function.md)
     * [Regression Splines](part7/2_regression_splines.md)
     * [Smoothing Splines](part7/3_smoothing_splines.md)
+    * [Generalized Additive Models](part7/4_generalized_additive_models.md)
+    * [lab: Nonlinear function](part7/5_lab_nonlinear_function.md)
+    * [Exercise Conceptual](part7/6_exercises_conceptual.md)
